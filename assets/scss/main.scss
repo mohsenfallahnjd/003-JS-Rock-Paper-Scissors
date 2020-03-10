@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  background: #f3f3f3;
+  color: #525252;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+
+  h2,
+  h3 {
+    margin: 10px 0px;
+  }
+
+  .battle {
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .aiChoice {
+      width: 125px;
+      height: 125px;
+      background: #ffffff;
+      text-align: center;
+      line-height: 125px;
+      border-radius: 15px;
+      box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.25);
+
+      background-size: 90%;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      &.rock {
+        background-image: url("../image/rock.png");
+      }
+      &.paper {
+        background-image: url("../image/paper.png");
+      }
+      &.scissors {
+        background-image: url("../image/scissors.png");
+      }
+    }
+  }
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0px;
+
+  .option {
+    width: 125px;
+    height: 125px;
+    background: #ffffff;
+    text-align: center;
+    line-height: 125px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &.rock {
+      background-image: url("../image/rock.png");
+    }
+    &.paper {
+      background-image: url("../image/paper.png");
+    }
+    &.scissors {
+      background-image: url("../image/scissors.png");
+    }
+    &.selected {
+      border: 3px solid black;
+      pointer-events: none;
+      &.winner {
+        background-color: #24a484;
+      }
+      &.loser {
+        background-color: #af1e2d;
+      }
+      &.draw {
+        background-color: #ffce00;
+      }
+    }
+    &.disabled {
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

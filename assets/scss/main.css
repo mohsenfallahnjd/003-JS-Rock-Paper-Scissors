@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  background: #f3f3f3;
+  color: #525252;
+}
+
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.game h2,
+.game h3 {
+  margin: 10px 0px;
+}
+
+.game .battle {
+  width: 100%;
+  margin: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game .battle .aiChoice {
+  width: 125px;
+  height: 125px;
+  background: #ffffff;
+  text-align: center;
+  line-height: 125px;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.25);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.game .battle .aiChoice.rock {
+  background-image: url("../image/rock.png");
+}
+
+.game .battle .aiChoice.paper {
+  background-image: url("../image/paper.png");
+}
+
+.game .battle .aiChoice.scissors {
+  background-image: url("../image/scissors.png");
+}
+
+.options {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 10px 0px;
+}
+
+.options .option {
+  width: 125px;
+  height: 125px;
+  background: #ffffff;
+  text-align: center;
+  line-height: 125px;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.options .option:hover {
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.options .option.rock {
+  background-image: url("../image/rock.png");
+}
+
+.options .option.paper {
+  background-image: url("../image/paper.png");
+}
+
+.options .option.scissors {
+  background-image: url("../image/scissors.png");
+}
+
+.options .option.selected {
+  border: 3px solid black;
+  pointer-events: none;
+}
+
+.options .option.selected.winner {
+  background-color: #24a484;
+}
+
+.options .option.selected.loser {
+  background-color: #af1e2d;
+}
+
+.options .option.selected.draw {
+  background-color: #ffce00;
+}
+
+.options .option.disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.hide {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */
